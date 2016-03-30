@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ok-rentals',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://super-rentals-mike.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
