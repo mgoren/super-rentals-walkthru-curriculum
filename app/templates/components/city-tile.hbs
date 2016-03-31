@@ -3,7 +3,7 @@
 <h3>Rentals available in {{city.name}}:</h3>
 
 <ul>
-  {{#each city.rentals as |rental|}}
+  {{#each sortedRentals as |rental|}}
     {{rental-tile rental=rental}}
   {{/each}}
 </ul>

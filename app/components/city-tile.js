@@ -6,6 +6,10 @@ export default Ember.Component.extend({
     return this.get('city.name') + ', ' + this.get('city.country');
   }),
 
+  rentalsSortingAsc: ['name:desc'],
+
+  sortedRentals: Ember.computed.sort('city.rentals', 'rentalsSortingAsc'),
+
   actions: {
     delete(city) {
       if (confirm('Are you sure you want to delete this city?')) {
